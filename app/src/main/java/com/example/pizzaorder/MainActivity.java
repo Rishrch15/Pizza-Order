@@ -12,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    RadioGroup radioGroupPizza, radioGroupSize, radioGroupCrust;
-    CheckBox checkBoxExtraCheese, checkBoxMushrooms, checkBoxOnions, checkBoxTomatoes, checkBoxPineapple;
-    Button buttonProcessOrder, buttonNewOrder;
-    TextView textViewOrderDetails, textViewTotal;
+    private RadioGroup radioGroupPizza, radioGroupSize, radioGroupCrust;
+    private CheckBox checkBoxExtraCheese, checkBoxMushrooms, checkBoxOnions, checkBoxTomatoes, checkBoxPineapple;
+    private Button buttonProcessOrder, buttonNewOrder;
+    private TextView textViewOrderDetails, textViewTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         int total = 0;
         StringBuilder order = new StringBuilder("You ordered: ");
 
-        // Pizza type
+        // sa Pizza type
         int selectedPizzaId = radioGroupPizza.getCheckedRadioButtonId();
         RadioButton selectedPizzaButton = findViewById(selectedPizzaId);
         if (selectedPizzaButton == null) {
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         }
         String pizzaType = selectedPizzaButton.getText().toString();
 
-        // Pizza size
+        // sa Pizza size
         int selectedSizeId = radioGroupSize.getCheckedRadioButtonId();
         RadioButton selectedSizeButton = findViewById(selectedSizeId);
         if (selectedSizeButton == null) {
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         total += basePrice;
         order.append(pizzaType).append(", ").append(size).append(" Size");
 
-        // Crust type
+        // Base sa  ang price Crust type
         int selectedCrustId = radioGroupCrust.getCheckedRadioButtonId();
         RadioButton selectedCrustButton = findViewById(selectedCrustId);
         String crust = selectedCrustButton.getText().toString();
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             order.append(" (+₱").append(crustAdd).append(")");
         }
 
-        // Toppings
+        // Para sa Toppings Pricing
         order.append("\nToppings: ");
         int toppingTotal = 0;
         int count = 0;
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
         total += toppingTotal;
 
-        // VAT
+        // Para to sa PWD Discount tsaka vat
         double vat = total * 0.12;
         double finalTotal = total + vat;
 
