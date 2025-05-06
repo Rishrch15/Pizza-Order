@@ -1,3 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PizzaOrder</string>
+    <string name="app_name">PIZZA APP</string>
+    <string name="hawaiian_pizza">Hawaiian Pizza</string>
+    <string name="ham_and_cheese_pizza">Ham and Cheese Pizza</string>
+    <string name="small_pizza">Small Pizza</string>
+    <string name="medium_pizza">Medium Pizza</string>
+    <string name="large_pizza">Large Pizza</string>
+    <string name="pizza_toppings">Pizza with Toppings</string>
+    <string name="hawaiian">Hawaiian</string>
+    <string name="ham_and_cheese">Ham and Cheese</string>
+    <string name="size">Size</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="crust_type">Crust Type</string>
+    <string name="thin">Thin</string>
+    <string name="thick">Thick</string>
+    <string name="extra_toppings">Extra Toppings</string>
+    <string name="extra_cheese">Extra Cheese</string>
+    <string name="mushrooms">Mushrooms</string>
+    <string name="onions">Onions</string>
+    <string name="tomatoes">Tomatoes</string>
+    <string name="pineapple">Pineapple</string>
+    <string name="process_order">PROCESS ORDER</string>
+    <string name="new_order">NEW ORDER</string>
+    <string name="your_order_is">Your order is:</string>
+    <string name="is_customer_pwd">Is Customer PWD?</string>
 </resources>

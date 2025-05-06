@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/border"
+            android:layout_marginBottom="30dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PIZZA APP"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,22 +49,26 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:src="@drawable/hawaiian"
-                android:scaleType="fitCenter"
-                />
+
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/hawaiian"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/hawaiian_pizza" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="100dp"
                 android:layout_weight="1"
                 android:src="@drawable/hamandcheese"
                 android:scaleType="fitCenter"
-                />
+                android:contentDescription="@string/ham_and_cheese_pizza" />
         </LinearLayout>
+
+
 
         <RadioGroup
             android:id="@+id/radioGroupPizza"
@@ -54,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:checked="true"
-                android:text="Ham &amp; Cheese" />
+                android:text="Ham and Cheese" />
         </RadioGroup>
 
         <TextView
@@ -78,23 +114,23 @@
                 android:layout_weight="1"
                 android:src="@drawable/pizza_small"
                 android:scaleType="fitCenter"
-                 />
-
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_weight="1"
-                android:src="@drawable/pizza_medium"
-                android:scaleType="fitCenter"
-                 />
+                android:contentDescription="@string/small_pizza" />
 
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
+                android:src="@drawable/pizza_medium"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/medium_pizza" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
                 android:src="@drawable/pizza_large"
                 android:scaleType="fitCenter"
-                 />
+                android:contentDescription="@string/large_pizza" />
         </LinearLayout>
 
         <RadioGroup
@@ -171,6 +207,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
+            android:backgroundTint="@color/white"
             android:layout_marginBottom="16dp"
             android:background="#F0F0F0"
             android:padding="8dp">
@@ -214,11 +251,11 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="80dp"
+                android:layout_height="180dp"
                 android:layout_weight="1"
                 android:src="@drawable/pizza_toppings"
                 android:scaleType="fitCenter"
-                />
+                android:contentDescription="@string/pizza_toppings" />
         </LinearLayout>
 
         <LinearLayout
@@ -228,9 +265,9 @@
 
             <Button
                 android:id="@+id/buttonProcessOrder"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="PROCESS ORDER"
                 android:backgroundTint="#800080"
                 android:textColor="@android:color/white"
@@ -238,9 +275,9 @@
 
             <Button
                 android:id="@+id/buttonNewOrder"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="NEW ORDER"
                 android:backgroundTint="#800080"
                 android:textColor="@android:color/white"
@@ -268,6 +305,16 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonIsPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Is Customer PWD?"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#800080"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 </ScrollView>
